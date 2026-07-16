@@ -1,0 +1,54 @@
+┌──[fool@parrot]─[~/Coursera/arm-gnu-toolchain-15.2.rel1-x86_64-aarch64_be-none-linux-gnu/bin]
+└──╼ $ ./aarch64_be-none-linux-gnu-gcc  -print-sysroot
+/home/fool/Coursera/arm-gnu-toolchain-15.2.rel1-x86_64-aarch64_be-none-linux-gnu/bin/../aarch64_be-none-linux-gnu/libc
+
+┌──[fool@parrot]─[~/Coursera/arm-gnu-toolchain-15.2.rel1-x86_64-aarch64_be-none-linux-gnu/bin]
+└──╼ $ ./aarch64_be-none-linux-gnu-gcc -v            
+Using built-in specs.
+COLLECT_GCC=./aarch64_be-none-linux-gnu-gcc
+COLLECT_LTO_WRAPPER=/home/fool/Coursera/arm-gnu-toolchain-15.2.rel1-x86_64-aarch64_be-none-linux-gnu/bin/../libexec/gcc/aarch64_be-none-linux-gnu/15.2.1/lto-wrapper
+Target: aarch64_be-none-linux-gnu
+Configured with: /tmp/jenkins-a9d0d7f5/workspace/GNU-toolchain/arm-15/src/gcc/configure --target=aarch64_be-none-linux-gnu --prefix= --with-sysroot=/aarch64_be-none-linux-gnu/libc --with-build-sysroot=/tmp/jenkins-a9d0d7f5/workspace/GNU-toolchain/arm-15/build-aarch64_be-none-linux-gnu/install//aarch64_be-none-linux-gnu/libc --with-bugurl=https://gitlab.arm.com/tooling/gnu-devtools-for-arm/-/issues/ --enable-gnu-indirect-function --enable-shared --disable-libssp --disable-libmudflap --enable-checking=release --enable-languages=c,c++,fortran --with-gmp=/tmp/jenkins-a9d0d7f5/workspace/GNU-toolchain/arm-15/build-aarch64_be-none-linux-gnu/host-tools --with-mpfr=/tmp/jenkins-a9d0d7f5/workspace/GNU-toolchain/arm-15/build-aarch64_be-none-linux-gnu/host-tools --with-mpc=/tmp/jenkins-a9d0d7f5/workspace/GNU-toolchain/arm-15/build-aarch64_be-none-linux-gnu/host-tools --with-isl=/tmp/jenkins-a9d0d7f5/workspace/GNU-toolchain/arm-15/build-aarch64_be-none-linux-gnu/host-tools --enable-fix-cortex-a53-843419 --with-pkgversion='Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)'
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 15.2.1 20251203 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 
+
+┌──[fool@parrot]─[~/Coursera/assignment-2-shad0w46/finder-app]
+└──╼ $ make clean
+make CROSS_COMPILE=/home/fool/Coursera/arm-gnu-toolchain-15.2.rel1-x86_64-aarch64_be-none-linux-gnu/bin/aarch64_be-none-linux-gnu-   
+rm -f writer *.o
+/home/fool/Coursera/arm-gnu-toolchain-15.2.rel1-x86_64-aarch64_be-none-linux-gnu/bin/aarch64_be-none-linux-gnu-gcc -Wall -Werror writer.c -o writer
+
+┌──[fool@parrot]─[~/Coursera/assignment-2-shad0w46/finder-app]
+└──╼ $ file writer
+writer: ELF 64-bit MSB executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64_be.so.1, for GNU/Linux 3.7.0, with debug_info, not stripped
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK
+/home/fool/Coursera/assignment-2-shad0w46/assignment-autotest/test/assignment1/Test_assignment_validate.c:9:test_assignment_validate:PASS
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK
+Executing assignment test script
+~/Coursera/assignment-2-shad0w46/assignment-autotest/test/assignment2 ~/Coursera/assignment-2-shad0w46
+~/Coursera/assignment-2-shad0w46/finder-app ~/Coursera/assignment-2-shad0w46/assignment-autotest/test/assignment2 ~/Coursera/assignment-2-shad0w46
+rm -f writer *.o
+gcc -Wall -Werror writer.c -o writer
+Usage: ./writer <writefile> <writestr>
+Usage: ./writer <writefile> <writestr>
+Performing make clean
+rm -f writer *.o
+Using default value AELD_IS_FUN for string to write
+Using default value 10 for number of files to write
+Writing 10 files containing string AELD_IS_FUN to /tmp/aeld-data
+/tmp/aeld-data created
+rm -f writer *.o
+gcc -Wall -Werror writer.c -o writer
+The number of files are 10 and the number of matching lines are 10
+success
+Test of assignment assignment2 complete with success
+
+┌──[fool@parrot]─[~/Coursera/assignment-2-shad0w46]
+└──╼ $ 
